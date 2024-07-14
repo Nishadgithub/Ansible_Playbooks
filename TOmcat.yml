@@ -2,7 +2,7 @@
 - name: Download Tomcat from tomcat.apache.org
   hosts: all
   tasks:
-  - name: Create a Directory /tmp/tomcat
+  - name: Create Directory /tmp/tomcat
     file:
       path: /tmp/tomcat
       state: directory
