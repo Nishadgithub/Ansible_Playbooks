@@ -1,0 +1,11 @@
+---
+- name: insert hostname in etc file
+  become: true
+  hosts: all
+  tasks:
+    - name: insert hostname
+      lineinfile:
+        path: "/etc/hosts" 
+        line: 192.168.0.200 demo demo.example.comp
+
+    
