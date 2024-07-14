@@ -1,0 +1,18 @@
+---
+- name: Download Tomcat from tomcat.apache.org
+  hosts: all
+  tasks:
+  - name: Create a Directory /tmp/tomcat
+    file:
+      path: /tmp/tomcat
+      state: directory
+      mode: 0755
+      owner: root
+      group: root
+  - name: Download Tomcat using get_url
+    get_url:
+      url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
+      dest: /tmp/tomcat
+      mode: 0755
+      group: root
+      owner: root

@@ -1,0 +1,10 @@
+---
+- name: Copy file to client server
+  hosts: all
+  tasks:
+  -  name: Copy
+     become: true
+     copy:
+       src: test.txt
+       dest: /tmp
+ 
